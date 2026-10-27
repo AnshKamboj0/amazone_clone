@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LearnHub Dashboard</title>
+
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+
+            <a class="logo" href="#dashboard">
+                <span class="logo-circle">L</span>
+                <span>Learn Hub</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul>
+
+                    <li>
+                        <a class="active" href="#dashboard">
+                            🏠 Dashboard
+                        </a>
+                    </li>
+
+                    <li class="menu-group">
+                        <button class="sidebar-toggle submenu-toggle" type="button" aria-expanded="false">
+                            <span>👥 Users</span>
+                            <svg class="menu-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"
+                                focusable="false">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#users">All Users</a></li>
+                            <li><a href="#add-user">Add User</a></li>
+                            <li><a href="#user-roles">User Roles</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-group">
+                        <button class="sidebar-toggle submenu-toggle" type="button" aria-expanded="false">
+                            <span>📖 Courses</span>
+                            <svg class="menu-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"
+                                focusable="false">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#courses">All Courses</a></li>
+                            <li><a href="#add-course">Add Course</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#reports">📄 Reports</a>
+                    </li>
+
+                    <li class="menu-group">
+                        <button class="sidebar-toggle submenu-toggle" type="button" aria-expanded="false">
+                            <span>⚙️ Settings</span>
+                            <svg class="menu-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"
+                                focusable="false">
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </button>
+
+                        <ul class="submenu">
+                            <li><a href="#general">General</a></li>
+                            <li><a href="#appearance">Appearance</a></li>
+                            <li><a href="#notifications">Notifications</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+        <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Close sidebar"></button>
+
+        <div class="main-area">
+
+            <header class="topbar">
+
+                <button class="menu-button" id="menu-button" type="button" aria-label="Toggle sidebar"
+                    aria-controls="sidebar" aria-expanded="true">
+                    <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+                        focusable="false">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <form class="search-form" action="#" role="search">
+                    <label class="screen-reader-only" for="search">
+                        Search
+                    </label>
+
+                    <input type="search" id="search" name="search" placeholder="Search here...">
+                </form>
+
+                <button class="notification-button" type="button">
+                    🔔
+                    <span class="notification-count">8</span>
+                </button>
+
+                <div class="profile-menu" id="profile-menu">
+
+                    <div class="profile-info">
+                        <img src="Ansh.jpeg" alt="Priyanshu" class="profile-pic">
+                        <span class="profile-name">Priyanshu</span>
+                    </div>
+
+                    <button class="profile-toggle" id="profile-button" type="button"
+                        aria-label="Open profile menu" aria-expanded="false" aria-controls="profile-dropdown">
+                        <svg class="profile-arrow" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"
+                            focusable="false">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="#profile">👤 My Profile</a>
+                        <a href="#about">ℹ️ About</a>
+
+                        <button class="logout-button" type="button">
+                            ↪ Log Out
+                        </button>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <main class="content" id="dashboard">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Welcome back, Priyanshu!</p>
+                    </div>
+
+                    <p class="breadcrumb">
+                        Home &nbsp; › &nbsp; Dashboard
+                    </p>
+                </div>
+
+                <section class="summary-cards" id="overview">
+
+                    <article class="summary-card">
+                        <div class="card-icon blue">👥</div>
+
+                        <div>
+                            <p>Total Users</p>
+                            <h2>120</h2>
+                            <a href="#users">View Users →</a>
+                        </div>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="card-icon green">📖</div>
+
+                        <div>
+                            <p>Total Courses</p>
+                            <h2>18</h2>
+                            <a href="#courses">View Courses →</a>
+                        </div>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="card-icon orange">📄</div>
+
+                        <div>
+                            <p>Total Enrollments</p>
+                            <h2>432</h2>
+                            <a href="#enrollments">View Enrollments →</a>
+                        </div>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="card-icon purple">⚙️</div>
+
+                        <div>
+                            <p>Pending Approvals</p>
+                            <h2>6</h2>
+                            <a href="#approvals">View Details →</a>
+                        </div>
+                    </article>
+
+                </section>
+
+                <div class="dashboard-columns">
+
+                    <section class="panel" id="users">
+
+                        <div class="panel-heading">
+                            <h2>Recent Users</h2>
+                            <a href="#all-users">View All →</a>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th><span class="screen-reader-only">Actions</span></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Aarav Mehta</td>
+                                        <td>aarav@example.com</td>
+                                        <td>Student</td>
+                                        <td>
+                                            <span class="status active-status">Active</span>
+                                        </td>
+                                        <td class="user-actions-cell">
+                                            <div class="user-actions">
+                                                <button class="user-actions-toggle" type="button"
+                                                    aria-label="Actions for Aarav Mehta" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    ⋮
+                                                </button>
+                                                <div class="user-actions-menu" role="menu" hidden>
+                                                    <button type="button" role="menuitem" data-action="view">View</button>
+                                                    <button type="button" role="menuitem" data-action="edit">Edit</button>
+                                                    <button type="button" role="menuitem" data-action="delete">Delete</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Sneha Kapoor</td>
+                                        <td>sneha@example.com</td>
+                                        <td>Instructor</td>
+                                        <td>
+                                            <span class="status active-status">Active</span>
+                                        </td>
+                                        <td class="user-actions-cell">
+                                            <div class="user-actions">
+                                                <button class="user-actions-toggle" type="button"
+                                                    aria-label="Actions for Sneha Kapoor" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    ⋮
+                                                </button>
+                                                <div class="user-actions-menu" role="menu" hidden>
+                                                    <button type="button" role="menuitem" data-action="view">View</button>
+                                                    <button type="button" role="menuitem" data-action="edit">Edit</button>
+                                                    <button type="button" role="menuitem" data-action="delete">Delete</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Rohit Verma</td>
+                                        <td>rohit@example.com</td>
+                                        <td>Student</td>
+                                        <td>
+                                            <span class="status inactive-status">Inactive</span>
+                                        </td>
+                                        <td class="user-actions-cell">
+                                            <div class="user-actions">
+                                                <button class="user-actions-toggle" type="button"
+                                                    aria-label="Actions for Rohit Verma" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    ⋮
+                                                </button>
+                                                <div class="user-actions-menu" role="menu" hidden>
+                                                    <button type="button" role="menuitem" data-action="view">View</button>
+                                                    <button type="button" role="menuitem" data-action="edit">Edit</button>
+                                                    <button type="button" role="menuitem" data-action="delete">Delete</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Anjali Singh</td>
+                                        <td>anjali@example.com</td>
+                                        <td>Instructor</td>
+                                        <td>
+                                            <span class="status active-status">Active</span>
+                                        </td>
+                                        <td class="user-actions-cell">
+                                            <div class="user-actions">
+                                                <button class="user-actions-toggle" type="button"
+                                                    aria-label="Actions for Anjali Singh" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    ⋮
+                                                </button>
+                                                <div class="user-actions-menu" role="menu" hidden>
+                                                    <button type="button" role="menuitem" data-action="view">View</button>
+                                                    <button type="button" role="menuitem" data-action="edit">Edit</button>
+                                                    <button type="button" role="menuitem" data-action="delete">Delete</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Karan Patel</td>
+                                        <td>karan@example.com</td>
+                                        <td>Student</td>
+                                        <td>
+                                            <span class="status active-status">Active</span>
+                                        </td>
+                                        <td class="user-actions-cell">
+                                            <div class="user-actions">
+                                                <button class="user-actions-toggle" type="button"
+                                                    aria-label="Actions for Karan Patel" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    ⋮
+                                                </button>
+                                                <div class="user-actions-menu" role="menu" hidden>
+                                                    <button type="button" role="menuitem" data-action="view">View</button>
+                                                    <button type="button" role="menuitem" data-action="edit">Edit</button>
+                                                    <button type="button" role="menuitem" data-action="delete">Delete</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+
+                    <section class="panel quick-actions">
+                        <h2>Quick Actions</h2>
+
+                        <div class="action-grid">
+
+                            <a class="action blue-action" href="#add-user">
+                                <span>👥</span>
+                                Add New User
+                            </a>
+
+                            <a class="action green-action" href="#add-course">
+                                <span>📖</span>
+                                Create Course
+                            </a>
+
+                            <a class="action orange-action" href="#categories">
+                                <span>📄</span>
+                                Manage Categories
+                            </a>
+
+                            <a class="action purple-action" href="#settings">
+                                <span>⚙️</span>
+                                Settings
+                            </a>
+
+                        </div>
+                    </section>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <dialog class="edit-user-dialog" id="edit-user-dialog" aria-labelledby="edit-user-title">
+        <form id="edit-user-form">
+            <h2 id="edit-user-title">Edit user</h2>
+            <label>
+                Name
+                <input id="edit-user-name" name="name" type="text" required>
+            </label>
+            <label>
+                Email
+                <input id="edit-user-email" name="email" type="email" required>
+            </label>
+            <label>
+                Role
+                <input id="edit-user-role" name="role" type="text" required>
+            </label>
+            <div class="edit-user-actions">
+                <button type="button" id="cancel-user-edit">Cancel</button>
+                <button type="submit">Save changes</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script>
+        const submenuButtons = document.querySelectorAll(".submenu-toggle");
+
+        submenuButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const menuGroup = button.parentElement;
+                const isOpen = menuGroup.classList.toggle("open");
+
+                button.setAttribute("aria-expanded", isOpen);
+            });
+        });
+
+        const profileMenu = document.getElementById("profile-menu");
+        const profileButton = document.getElementById("profile-button");
+
+        profileButton.addEventListener("click", function () {
+            const isOpen = profileMenu.classList.toggle("open");
+
+            profileButton.setAttribute("aria-expanded", isOpen);
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!profileMenu.contains(event.target)) {
+                profileMenu.classList.remove("open");
+                profileButton.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const usersTable = document.querySelector("#users tbody");
+        const editUserDialog = document.getElementById("edit-user-dialog");
+        const editUserForm = document.getElementById("edit-user-form");
+        let editingUserRow = null;
+
+        editUserDialog.addEventListener("close", function () {
+            editingUserRow = null;
+        });
+
+        function closeUserMenus() {
+            usersTable.querySelectorAll(".user-actions-menu").forEach(function (menu) {
+                menu.hidden = true;
+                menu.previousElementSibling.setAttribute("aria-expanded", "false");
+            });
+        }
+
+        usersTable.addEventListener("click", function (event) {
+            const target = event.target;
+            const toggle = target.closest(".user-actions-toggle");
+
+            if (toggle) {
+                const menu = toggle.nextElementSibling;
+                const shouldOpen = menu.hidden;
+
+                closeUserMenus();
+                menu.hidden = !shouldOpen;
+                toggle.setAttribute("aria-expanded", shouldOpen);
+                return;
+            }
+
+            const action = target.closest("[data-action]");
+            if (!action) {
+                return;
+            }
+
+            const row = action.closest("tr");
+            const cells = row.cells;
+            const nameCell = cells[1];
+            const name = nameCell.textContent.trim();
+
+            if (action.dataset.action === "view") {
+                window.alert(
+                    "Name: " + name +
+                    "\nEmail: " + cells[2].textContent.trim() +
+                    "\nRole: " + cells[3].textContent.trim() +
+                    "\nStatus: " + cells[4].textContent.trim()
+                );
+            } else if (action.dataset.action === "edit") {
+                editingUserRow = row;
+                document.getElementById("edit-user-name").value = name;
+                document.getElementById("edit-user-email").value = cells[2].textContent.trim();
+                document.getElementById("edit-user-role").value = cells[3].textContent.trim();
+                editUserDialog.showModal();
+            } else if (action.dataset.action === "delete") {
+                if (window.confirm("Delete " + name + "?")) {
+                    row.remove();
+                    usersTable.querySelectorAll("tr").forEach(function (userRow, index) {
+                        userRow.cells[0].textContent = index + 1;
+                    });
+                }
+            }
+
+            closeUserMenus();
+        });
+
+        editUserForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if (!editingUserRow) {
+                return;
+            }
+
+            const name = document.getElementById("edit-user-name").value.trim();
+            const email = document.getElementById("edit-user-email").value.trim();
+            const role = document.getElementById("edit-user-role").value.trim();
+            const cells = editingUserRow.cells;
+
+            cells[1].textContent = name;
+            cells[2].textContent = email;
+            cells[3].textContent = role;
+            editingUserRow.querySelector(".user-actions-toggle").setAttribute(
+                "aria-label",
+                "Actions for " + name
+            );
+            editUserDialog.close();
+            editingUserRow = null;
+        });
+
+        document.getElementById("cancel-user-edit").addEventListener("click", function () {
+            editUserDialog.close();
+            editingUserRow = null;
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".user-actions")) {
+                closeUserMenus();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeUserMenus();
+            }
+        });
+
+        const appLayout = document.querySelector(".app-layout");
+        const menuButton = document.getElementById("menu-button");
+        const sidebarBackdrop = document.getElementById("sidebar-backdrop");
+
+        menuButton.addEventListener("click", function () {
+            const isHidden = appLayout.classList.toggle("sidebar-hidden");
+            menuButton.setAttribute("aria-expanded", !isHidden);
+        });
+
+        sidebarBackdrop.addEventListener("click", function () {
+            appLayout.classList.add("sidebar-hidden");
+            menuButton.setAttribute("aria-expanded", "false");
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && window.matchMedia("(max-width: 900px)").matches) {
+                appLayout.classList.add("sidebar-hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

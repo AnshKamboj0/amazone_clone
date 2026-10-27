@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 20px;
+  background-color: #f4f7fb;
+  color: #18243a;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.page {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.registration-form {
+  overflow: hidden;
+  border: 1px solid #e4eaf1;
+  border-radius: 9px;
+  background-color: white;
+}
+
+/* Blue title area */
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 25px;
+  background-color: #2878e8;
+  color: white;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.form-header h1 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.form-header p {
+  margin: 0;
+  color: #eaf2ff;
+}
+
+/* Form sections */
+.form-section {
+  margin: 10px 12px;
+  overflow: hidden;
+  border: 1px solid #e1e7ef;
+  border-radius: 8px;
+}
+
+.section-heading {
+  padding: 10px 13px;
+  background-color: #f1f4f8;
+}
+
+.section-heading h2 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #68758a;
+  font-size: 11px;
+}
+
+/* Four columns on large screen */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 14px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field > label,
+.choice-field legend {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.required {
+  color: #e53935;
+}
+
+/* Input boxes */
+.control {
+  width: 100%;
+  min-height: 36px;
+  padding: 8px;
+  border: 1px solid #d5dce5;
+  border-radius: 5px;
+  background-color: white;
+  color: #27354b;
+  font: inherit;
+}
+
+textarea.control {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.range-control {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #2878e8;
+}
+
+#knowledge-value {
+  min-width: 15px;
+  font-weight: bold;
+}
+
+/* Radio button and checkbox groups */
+.choice-field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice-field legend {
+  padding: 0;
+}
+
+.choice-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.choice-list label,
+.terms label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #2878e8;
+}
+
+/* Icons inside input fields */
+.input-with-icon {
+  position: relative;
+}
+
+.left-icon {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  color: #68758a;
+  pointer-events: none;
+}
+
+.right-icon {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  color: #68758a;
+}
+
+.input-with-icon .control {
+  padding-left: 40px;
+}
+
+.input-with-icon.has-right-icon .control {
+  padding-right: 40px;
+}
+
+/* Color picker */
+.color-control {
+  width: 100%;
+  height: 36px;
+  padding: 3px;
+  border: 1px solid #d5dce5;
+  border-radius: 5px;
+  background-color: white;
+  
+}
+.color-control input[type="color"]{
+  width: 30%;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: none;
+  color:#1769d2;
+  cursor: pointer;
+}
+
+.color-box {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+ .color-box input[type="color"] {
+    width: 20%;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #263248;
+    cursor: pointer; */
+} *
+
+/* Range input */
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.range-control {
+  width: 100%;
+  accent-color: #2878e8;
+}
+
+.range-row span {
+  min-width: 12px;
+  font-weight: bold;
+}
+
+/* Other Inputs spacing */
+.other-inputs-grid {
+  row-gap: 16px;
+}
+
+/* Skills field takes two rows */
+.skills-field {
+  grid-column: 4;
+  grid-row: span 2;
+}
+
+/* Skills checkbox border box */
+.skills-list {
+  height: 90px;
+  padding: 7px 10px;
+  overflow-y: auto;
+  border: 1px solid #d5dce5;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.skills-list label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-weight: normal;
+}
+
+.skills-list input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+/* Terms */
+.terms {
+  padding: 0 14px 12px;
+}
+
+.terms strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.terms a {
+  color: #1769d2;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+.form-buttons button {
+  min-width: 85px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reset-button {
+  background-color: #e9eef5;
+  color: #24324a;
+}
+
+.submit-button {
+  background-color: #2878e8;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #dbe3ee;
+}
+
+.submit-button:hover {
+  background-color: #1763d0;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-field {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .form-header {
+    padding: 14px;
+  }
+
+  .form-header h1 {
+    font-size: 17px;
+  }
+
+  .form-section {
+    margin: 8px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    padding: 12px;
+  }
+
+  .skills-field {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .form-buttons button {
+    flex: 1;
+  }
+}

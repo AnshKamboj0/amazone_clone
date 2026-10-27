@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Registration Form</title>
+
+  <link rel="stylesheet" href="Registration.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <main class="page">
+    <form class="registration-form" action="#" method="post" enctype="multipart/form-data">
+
+      <header class="form-header">
+        <span class="logo-icon">📝</span>
+
+        <div>
+          <h1>Student Registration Form</h1>
+          <p>Fill in the details below to create your account</p>
+        </div>
+      </header>
+
+      <section class="form-section">
+        <div class="section-heading">
+          <h2>1. Personal Information</h2>
+          <p>Enter your basic details</p>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="full-name">
+              Full Name <span class="required">*</span>
+            </label>
+
+            <div class="input-with-icon">
+              <i class="fa-regular fa-user left-icon"></i>
+
+              <input class="control" type="text" id="full-name" name="fullName" placeholder="Enter your full name"
+                required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">
+              Email Address <span class="required">*</span>
+            </label>
+
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope left-icon"></i>
+
+              <input class="control" type="email" id="email" name="email" placeholder="example@example.com" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password">
+              Password <span class="required">*</span>
+            </label>
+
+            <div class="input-with-icon has-right-icon">
+              <i class="fa-solid fa-lock left-icon"></i>
+
+              <input class="control" type="password" id="password" name="password" placeholder="Create a password"
+                required>
+
+              <i class="fa-regular fa-eye right-icon"></i>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="confirm-password">
+              Confirm Password <span class="required">*</span>
+            </label>
+
+            <div class="input-with-icon has-right-icon">
+              <i class="fa-solid fa-lock left-icon"></i>
+
+              <input class="control" type="password" id="confirm-password" name="confirmPassword"
+                placeholder="Confirm your password" required>
+
+              <i class="fa-regular fa-eye right-icon"></i>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="birth-date">
+              Date of Birth <span class="required">*</span>
+            </label>
+
+            <div class="input-with-icon">
+              <i class="fa-regular fa-calendar left-icon"></i>
+
+              <input class="control manual-date" type="date-field" id="birth-date" name="birthDate" placeholder="dd/mm/yyyy"
+                inputmode="numeric" maxlength="10" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required>
+            </div>
+          </div>
+
+          <fieldset class="field choice-field">
+            <legend>Gender <span class="required">*</span></legend>
+
+            <div class="choice-list">
+              <label>
+                <input type="radio" name="gender" value="male" required>
+                Male
+              </label>
+
+              <label>
+                <input type="radio" name="gender" value="female">
+                Female
+              </label>
+
+              <label>
+                <input type="radio" name="gender" value="other">
+                Other
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+
+            <div class="input-with-icon">
+              <i class="fa-solid fa-phone left-icon"></i>
+
+              <input class="control" type="tel" id="phone" name="phone" placeholder="Enter 10 digit number">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+
+            <input class="control" type="number" id="age" name="age" min="16" max="100" value="18">
+          </div>
+
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-heading">
+          <h2>2. Additional Details</h2>
+          <p>Provide more information about yourself</p>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="country">
+              Country <span class="required">*</span>
+            </label>
+
+            <select class="control" id="country" name="country" required>
+              <option value="">Select Country</option>
+              <option value="india">India</option>
+              <option value="usa">United States</option>
+              <option value="uk">United Kingdom</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="state">
+              State <span class="required">*</span>
+            </label>
+
+            <select class="control" id="state" name="state" required>
+              <option value="">Select State</option>
+              <option value="delhi">Delhi</option>
+              <option value="gujarat">Gujarat</option>
+              <option value="maharashtra">Maharashtra</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="city">
+              City <span class="required">*</span>
+            </label>
+
+            <select class="control" id="city" name="city" required>
+              <option value="">Select City</option>
+              <option value="ahmedabad">Ahmedabad</option>
+              <option value="delhi">Delhi</option>
+              <option value="mumbai">Mumbai</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="pincode">Pincode</label>
+
+            <input class="control" type="text" id="pincode" name="pincode" placeholder="Enter pincode">
+          </div>
+
+          <div class="field">
+            <label for="course">
+              Course Interested In <span class="required">*</span>
+            </label>
+
+            <select class="control" id="course" name="course" required>
+              <option value="">Select Course</option>
+              <option value="html-css">HTML and CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="web-design">Web Design</option>
+            </select>
+          </div>
+
+          <fieldset class="field choice-field">
+            <legend>Preferred Mode <span class="required">*</span></legend>
+
+            <div class="choice-list">
+              <label>
+                <input type="radio" name="studyMode" value="online" required>
+                Online
+              </label>
+
+              <label>
+                <input type="radio" name="studyMode" value="offline">
+                Offline
+              </label>
+
+              <label>
+                <input type="radio" name="studyMode" value="hybrid">
+                Hybrid
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="time-slot">Time Slot</label>
+
+            <input class="control" type="time" id="time-slot" name="timeSlot">
+          </div>
+
+          <div class="field">
+            <label for="joining-date">Joining Date</label>
+
+            <div class="input-with-icon">
+              <i class="fa-regular fa-calendar left-icon"></i>
+
+              <input class="control manual-date" type="text" id="joining-date" name="joiningDate"
+                placeholder="dd/mm/yyyy" inputmode="numeric" maxlength="10" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-heading">
+          <h2>3. Other Inputs</h2>
+          <p>Explore different input types</p>
+        </div>
+
+        <div class="form-grid other-inputs-grid">
+
+          <div class="field profile-field">
+            <label for="profile-picture">Upload Profile Picture</label>
+
+            <input class="control" type="file" id="profile-picture" name="profilePicture" accept="image/*">
+          </div>
+
+          <div class="field color-field">
+            <label for="favorite-color">Select Your Favorite Color</label>
+            <div class="color-box">
+              <input class="color-control" type="color" id="favorite-color" name="favoriteColor" value="#2878e8">
+            </div>
+          </div>
+
+          <div class="field knowledge-field">
+            <label for="knowledge">Rate Your Knowledge (1 - 10)</label>
+
+            <div class="range-row">
+              <input class="range-control" type="range" id="knowledge" name="knowledge" min="1" max="10" value="5">
+
+              <span id="knowledge-value">5</span>
+            </div>
+          </div>
+
+          <div class="field skills-field">
+            <label for="skills-html">Select Multiple Skills</label>
+
+            <div class="skills-list">
+              <label>
+                <input type="checkbox" id="skills-html" name="skills" value="html">
+                HTML
+              </label>
+
+              <label>
+                <input type="checkbox" name="skills" value="css">
+                CSS
+              </label>
+
+              <label>
+                <input type="checkbox" name="skills" value="javascript">
+                JavaScript
+              </label>
+
+              <label>
+                <input type="checkbox" name="skills" value="react">
+                React
+              </label>
+            </div>
+          </div>
+
+          <fieldset class="field choice-field hobbies-field">
+            <legend>Hobbies</legend>
+
+            <div class="choice-list">
+              <label>
+                <input type="checkbox" name="hobbies" value="reading" checked>
+                Reading
+              </label>
+
+              <label>
+                <input type="checkbox" name="hobbies" value="music">
+                Music
+              </label>
+
+              <label>
+                <input type="checkbox" name="hobbies" value="sports">
+                Sports
+              </label>
+
+              <label>
+                <input type="checkbox" name="hobbies" value="traveling" checked>
+                Traveling
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field website-field">
+            <label for="website">Website URL</label>
+
+            <div class="input-with-icon">
+              <i class="fa-solid fa-link left-icon"></i>
+
+              <input class="control" type="url" id="website" name="website" placeholder="https://example.com">
+            </div>
+          </div>
+
+          <div class="field feedback-field">
+            <label for="feedback">Your Feedback</label>
+
+            <textarea class="control" id="feedback" name="feedback"
+              placeholder="Write your feedback here..."></textarea>
+          </div>
+
+        </div>
+
+        <input type="hidden" name="formType" value="student-registration">
+
+        <div class="terms">
+          <strong>
+            Terms &amp; Conditions <span class="required">*</span>
+          </strong>
+
+          <label>
+            <input type="checkbox" name="terms" value="accepted" required>
+            I agree to the <a href="#terms">Terms and Conditions</a>
+          </label>
+        </div>
+
+        <div class="form-buttons">
+          <button class="reset-button" type="reset">Reset</button>
+          <button class="submit-button" type="submit">Submit</button>
+        </div>
+      </section>
+      <script>
+        const knowledgeSlider = document.getElementById("knowledge");
+        const knowledgeValue = document.getElementById("knowledge-value");
+
+        knowledgeSlider.addEventListener("input", function () {
+          knowledgeValue.textContent = knowledgeSlider.value;
+        });
+      </script>
+      <script>
+        const dateInputs = document.querySelectorAll(".manual-date");
+
+        dateInputs.forEach(function (dateInput) {
+          dateInput.addEventListener("input", function () {
+            let numbers = dateInput.value.replace(/\D/g, "");
+
+            numbers = numbers.slice(0, 8);
+
+            if (numbers.length > 4) {
+              dateInput.value =
+                numbers.slice(0, 2) + "/" +
+                numbers.slice(2, 4) + "/" +
+                numbers.slice(4);
+            } else if (numbers.length > 2) {
+              dateInput.value =
+                numbers.slice(0, 2) + "/" +
+                numbers.slice(2);
+            } else {
+              dateInput.value = numbers;
+            }
+          });
+        });
+      </script>
+      </section>
+
+    </form>
+  </main>
+
+</body>
+
+</html>

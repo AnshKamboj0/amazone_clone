@@ -1,0 +1,56 @@
+/* div {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: burlywood;
+    animation-name: colroAnimate;
+    animation-duration: 2s; 
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation: colorAnimate 1s ease-in 0s infinite normal;
+}
+
+@keyframes colorAnimate {
+    0% {
+        left: 0px;
+        background: yellow;
+    }
+
+    50% {
+        left: 300px;
+        background-color: red;
+        color:white;
+    }
+    100% {
+        left: 300px;
+        background-color: rgb(18, 244, 252);
+        color:white;
+    }
+} */
+
+
+/* Loading Animation  */
+.loader{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 20px solid #410B13;
+    border-top: 20px solid #91171F;
+    background-color: #CD5D67;
+    animation: spinAnimate 1s ease-out 0s infinite normal;
+
+}
+
+
+@keyframes spinAnimate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
